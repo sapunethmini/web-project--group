@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<body >
+
+<h2>product Forms</h2>
+
+<form action="product.php" method="POST">
+		<label for="first_name">First Name:</label>
+		<input type="text" id="fname" name="first_name" required><br/><br/><br/>
+
+		<label for="last_name">Last Name:</label>
+		<input type="text" id="lname" name="last_name" required><br/><br/><br/>
+
+		<label for="phone">Phone:</label>
+		<input type="text" id="phone" name="phone" required><br/><br/><br/>
+		<input type="hidden" id="id" name="id" value="id" /><br/>
+
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required><br/><br/><br/>
+
+		<label for="pname">Product name:</label>
+		<select id="pname" name="pname">
+            <option value="">product</option>
+              <option value="mango">mango</option>
+              <option value="apple">apple</option>
+              <option value="guava">guava</option>
+              <option value="papaya">papaya</option>
+			</select> <br/><br/><br/>
+
+		<label for="quantity">Quantity:</label>
+		     <input type="number" id="quantity" name="quantity" required><br/><br/><br/><br/><br/>
+            <button onclick="myFunction()" name="submit"  value="submit">SUBMIT</button>
+
+<script>
+function myFunction() {
+  alert("request sent succuessfully");
+}
+</script>
+           
+	
+	</form>
+
+
+</body>
+</html>

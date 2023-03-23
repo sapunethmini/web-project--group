@@ -1,0 +1,78 @@
+<html>
+<head>
+  <script>
+		function mangoButton() {
+			var button = document.getElementById("mangoButton");
+			button.innerHTML = "sent order!";
+			button.style.backgroundColor = "green";
+		}
+    function appleButton() {
+			var button = document.getElementById("appleButton");
+			button.innerHTML = "sent order!";
+			button.style.backgroundColor = "green";
+		}
+    function guavaButton() {
+			var button = document.getElementById("guavaButton");
+			button.innerHTML = "sent order!";
+			button.style.backgroundColor = "green";
+		}
+    function papyaButton() {
+			var button = document.getElementById("papyaButton");
+			button.innerHTML = "sent order!";
+			button.style.backgroundColor = "green";
+		}
+	</script>
+</head>
+<body >
+  <form action="veiwproduct.php" method="POST">
+    
+    <label for="email">Email:</label>
+		<input type="text" id="email" name="email" required><br/><br/>
+  <table>
+	<thead>
+		<tr>
+			<th>PRODUCT</th>
+			<th>qunatity</th>
+			<th>ORDER</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+      <th><input type="hidden" name="product" value="Mango">Mango </label></th>
+      <th>  
+        <input type="radio" name="qunatity" value="2"> 2KG
+         <input type="radio" name="qunatity" value="5"> 5KG
+         <input type="radio" name="qunatity" value="10"> 10KG
+      </th>
+      <th><button id="mangoButton" name="submit" value="submit" onclick="mangoButton()">order</button></th>
+    </tr>
+    <tr>
+      <th><input type="hidden"  name="product" value="Apple" checked>Apple </label></th>
+      <th>  
+        <input type="radio" name="qunatity" value="2"> 2KG
+        <input type="radio" name="qunatity" value="5"> 5KG
+        <input type="radio" name="qunatity" value="10"> 10KG</th>
+        <th><button id="appleButton" name="submit" value="submit" onclick="appleButton()">order</button></th>>
+    </tr>
+    <tr>
+      <th><input type="hidden"  name="product" value="Guava" checked>Guava </label></th>
+      <th>    
+        <input type="radio" name="qunatity" value="2" checked> 2KG
+        <input type="radio" name="qunatity" value="5"> 5KG
+        <input type="radio" name="qunatity" value="10"> 10KG</th>
+        <th><button id="guavaButton" name="submit" value="submit" onclick="guavaButton()">order</button></th>
+    </tr>
+    <tr>
+      <th><input type="hidden"  name="product" value="Papaya" checked>Papaya </label></th>
+      <th>  
+        <input type="radio" name="qunatity" value="2" checked> 2KG
+        <input type="radio" name="qunatity" value="5"> 5KG
+        <input type="radio" name="qunatity" value="10"> 10KG</th>
+        <th><button id="papyaButton" name="submit" value="submit" onclick="papyaButton()">order</button></th>
+    </tr>
+	</tbody>
+</table>
+</form>
+
+</body>
+</html>

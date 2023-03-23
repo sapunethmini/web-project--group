@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<style>
+		form {
+			border: 2px solid black;
+			padding: 20px;
+			width: 300px;
+			margin: auto;
+		}
+		input[type="text"], input[type="password"] {
+			margin-bottom: 10px;
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			margin-top: 10px;
+		}
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+        error{
+            color:red;
+            background-color:red;
+            padding:10px;
+            display: none;
+            margin-bottom: 20px;
+            font-size:14px;
+
+        }
+	</style>
+</head>
+<body bgcolor="#e5ccff">
+	<form action="login1.php" method="POST">
+		<label for="email">Username:</label>
+		<input type="text" id="email" value="<?php echo $username ?>" name="email" placeholder="username"   required/>
+        <p class="error username-error">
+           <?php echo $username ?>
+        </p>
+
+		<label for="password">Password:</label>
+		<input type="password"  value="<?php echo $password ?>" id="password" name="password" placeholder="password"   required>
+        <p class="error password-error">
+            <?php echo $password ?>
+
+        </p>
+
+		<input type="submit" value="Login">
+        <p class="success">
+            <?php echo $success ?>
+
+        </p>
+        
+	</form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Q&A Page</title>
+    <style>
+        h1{
+            color:blue;
+            font-size:55px;
+        }
+      /* Hide the answers by default */
+      .answer {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>help center</h1>
+    <div class="question">
+      <p>How do I create a purchase order?</p>
+      <button class="toggle-answer">Show Answer</button>
+      <p class="answer">1.Log in to the supply chain management system.<br/>
+        2.Go to the "View our product section" section.<br/>
+        3.Enter your username.<br/>
+        4.then you can give your order<br/>
+        </p>
+    </div>
+<hr>
+<div class="question">
+    <p>How i set my payment</p>
+    <button class="toggle-answer">Show Answer</button>
+    <p class="answer">After your request.you will received the email to your email with link ,click that link and pay your payment.</p>
+  </div>
+<hr>
+<div class="question">
+    <p>How i reject my order?</p>
+    <button class="toggle-answer">Show Answer</button>
+    <p class="answer">If you want to cancel an order, send your receipt and order number to the email address below within ten hours of placing the order.</p>
+  </div>
+<hr>
+<div class="question">
+    <p>i want another help</p>
+    <button class="toggle-answer">Show Answer</button>
+    <p class="answer">plz send the your problem to this email : sapuninethmini888@gmail.com</p>
+  </div>
+<hr>
+
+    <script>
+     
+      var buttons = document.querySelectorAll('.toggle-answer');
+
+      buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var answer = this.parentElement.querySelector('.answer');
+
+          if (answer.style.display === 'none') {
+            answer.style.display = 'block';
+            this.textContent = 'Hide Answer';
+          } else {
+            answer.style.display = 'none';
+            this.textContent = 'Show Answer';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
